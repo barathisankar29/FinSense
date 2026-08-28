@@ -5,10 +5,16 @@ import 'leaflet/dist/leaflet.css'
 import App from './App'
 import './style.css'
 
-ReactDOM.createRoot(document.getElementById('root')!).render(
+const rootElement = document.getElementById('root')
+
+if (!rootElement) {
+  throw new Error('FinSense root element #root was not found.')
+}
+
+ReactDOM.createRoot(rootElement).render(
   <React.StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename="/FinSense">
       <App />
     </BrowserRouter>
-  </React.StrictMode>
+  </React.StrictMode>,
 )
