@@ -51,7 +51,11 @@ function AppShell() {
     <div className="flex h-screen overflow-hidden bg-slate-950 text-slate-100">
       <aside className={`${sidebarOpen ? 'w-64' : 'w-20'} border-r border-slate-800 bg-slate-950 transition-all duration-200 px-3 py-4`}>
         <div className="mb-6 flex items-center gap-3 px-2">
-          <img src="/logo.png" alt="FinSense logo" className="h-9 w-9 rounded-xl object-cover ring-1 ring-slate-700" />
+          <img
+            src={`${import.meta.env.BASE_URL}logo.png`}
+            alt="FinSense logo"
+            className="h-9 w-9 rounded-xl object-cover ring-1 ring-slate-700"
+          />
           {sidebarOpen && <div className="text-lg font-semibold tracking-tight">FinSense</div>}
         </div>
 
