@@ -51,7 +51,7 @@ export default function FinancingPage() {
       <div className="space-y-4">
         <div className="grid gap-4 md:grid-cols-2">
           <select value={selectedAssetId} onChange={(e) => setSelectedAssetId(e.target.value)} className="rounded-xl border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200">
-            {assets.map((asset) => <option key={asset.id} value={asset.assetId}>{asset.assetId} · {asset.productName}</option>)}
+            {assets.map((asset) => <option key={asset.assetId} value={asset.assetId}>{asset.assetId} · {asset.productName}</option>)}
           </select>
           <input value={provider} onChange={(e) => setProvider(e.target.value)} className="rounded-xl border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200" placeholder="Provider name" />
           <select value={instrument} onChange={(e) => setInstrument(e.target.value)} className="rounded-xl border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200">

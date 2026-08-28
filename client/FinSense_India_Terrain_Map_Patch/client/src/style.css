@@ -315,16 +315,6 @@
   }
 }
 
-.finsense-map-marker {
-  background: transparent !important;
-  border: none !important;
-}
-
-.finsense-truck-marker {
-  background: transparent !important;
-  border: none !important;
-}
-
 @keyframes sweep {
   0% {
     transform: translateX(-100%);
@@ -371,4 +361,26 @@
     left: 76%;
     top: 62%;
   }
+}
+
+/* FinSense India logistics map */
+.finsense-map-marker,
+.finsense-truck-marker {
+  background: transparent !important;
+  border: 0 !important;
+}
+.leaflet-container {
+  background: #08131f;
+  font-family: Inter, sans-serif;
+}
+.leaflet-control-zoom a {
+  background: #020817 !important;
+  color: #e2e8f0 !important;
+  border-color: #334155 !important;
+}
+.leaflet-popup-content-wrapper,
+.leaflet-popup-tip {
+  background: #020817;
+  color: #e2e8f0;
+  border: 1px solid #334155;
 }

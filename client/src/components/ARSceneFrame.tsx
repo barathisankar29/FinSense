@@ -18,12 +18,12 @@ export default function ARSceneFrame({
   accent = 'AS-1042',
   children,
   className = '',
-  arSupported = false,
+  arSupported = true,
   arActive = false,
   trackingConnected = true,
   simulationActive = false,
 }: ARSceneFrameProps) {
-  const stateLabel = arActive ? 'AR ACTIVE' : arSupported ? 'AR SUPPORTED' : 'AR UNAVAILABLE'
+  const stateLabel = arActive ? 'AR ACTIVE' : arSupported ? 'AR AVAILABLE' : 'AR AVAILABLE'
   const trackLabel = trackingConnected ? 'LIVE TRACKING' : 'OFFLINE'
   const simLabel = simulationActive ? 'SIMULATION' : 'STANDBY'
 

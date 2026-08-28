@@ -99,9 +99,15 @@ export function fetchAssets(
 
   const qs = params.toString()
 
-  return request(
+  return request<Asset[] | { data?: Asset[]; assets?: Asset[]; items?: Asset[] }>(
     `/assets${qs ? `?${qs}` : ''}`,
-  )
+  ).then((payload) => {
+    if (Array.isArray(payload)) return payload
+    if (Array.isArray(payload?.data)) return payload.data
+    if (Array.isArray(payload?.assets)) return payload.assets
+    if (Array.isArray(payload?.items)) return payload.items
+    return []
+  })
 }
 
 export function fetchAsset(
@@ -173,6 +179,7 @@ export function attemptFinancing(
     {
       method: 'POST',
       body: JSON.stringify({
+        assetId,
         provider,
         requestedAmount,
         instrument,

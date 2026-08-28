@@ -58,7 +58,7 @@ function formatEta(progress: number) {
 }
 
 export default function MapPage() {
-  const [selectedView, setSelectedView] = useState<'2D MAP' | '3D TWIN' | 'AR VIEW'>('2D MAP')
+  const [selectedView, setSelectedView] = useState<'2D MAP' | '3D TWIN' | 'AR VIEW'>('AR VIEW')
   const [selectedNode, setSelectedNode] = useState<LogisticsNode | null>(null)
   const [selectedTruck, setSelectedTruck] = useState(true)
   const [progress, setProgress] = useState(0.42)
@@ -70,9 +70,7 @@ export default function MapPage() {
   const [layers, setLayers] = useState({ routes: true, vehicles: true, buildings: true, risk: true, traffic: true })
 
   useEffect(() => {
-    void fetchAssets()
-      .then((data) => setAssets(Array.isArray(data) ? data : []))
-      .catch(() => setAssets([]))
+    void fetchAssets().then(setAssets).catch(() => setAssets([]))
     void detectARSupport().then((state) => setArSupported(state.supported))
   }, [])
 
@@ -92,7 +90,7 @@ export default function MapPage() {
 
   const asset = assets.find((item) => item.assetId === 'AS-1042') ?? assets[0] ?? null
   const journeyState = getLogisticsJourneyState(progress)
-  const speed = getLogisticsTruckSpeed(journeyState, 1, progress)
+  const speed = getLogisticsTruckSpeed(journeyState)
   const eta = formatEta(progress)
   const activeRoutePoints = ACTIVE_ROUTE.points
   const currentLatLng = interpolateRouteCoordinates(activeRoutePoints, progress)
@@ -133,9 +131,6 @@ export default function MapPage() {
         exposure: selectedNode.exposure,
       }
     : null
-
-  const isArMode = selectedView === 'AR VIEW'
-  const arWorldScale = isArMode && arActive ? 0.14 : isArMode ? 0.22 : 0.8
 
   return (
     <div className="relative -m-4 min-h-[calc(100vh-5rem)] overflow-hidden bg-[#020817] text-slate-100 md:-m-6">
@@ -206,7 +201,7 @@ export default function MapPage() {
             </div>
           ) : (
             <div className="absolute inset-0">
-              <Canvas camera={{ position: [0, 86, 122], fov: 44 }} shadows dpr={isArMode ? [0.7, 1.1] : [1, 1.5]} gl={{ antialias: !isArMode, alpha: isArMode, powerPreference: 'low-power' }}>
+              <Canvas camera={{ position: [0, 86, 122], fov: 44 }} shadows dpr={[1, 2]} gl={{ antialias: true, alpha: selectedView === 'AR VIEW' }}>
                 {selectedView === 'AR VIEW' && <XRBridge active={arActive} />}
                 <LogisticsWorld
                   progress={progress}
@@ -214,19 +209,19 @@ export default function MapPage() {
                   highlightTruck={selectedTruck}
                   followCamera={followTruck}
                   showTerrain
-                  showRoad={layers.traffic && !isArMode}
-                  showBuildings={layers.buildings && !isArMode}
-                  showRoute={layers.routes && !isArMode}
+                  showRoad={layers.traffic}
+                  showBuildings={layers.buildings}
+                  showRoute={layers.routes}
                   showTruck={layers.vehicles}
-                  showRisk={layers.risk && !isArMode}
-                  showLabels={!isArMode}
-                  worldScale={arWorldScale}
+                  showRisk={layers.risk}
+                  showLabels
+                  worldScale={selectedView === 'AR VIEW' && arActive ? 0.18 : 1}
                   onSelectNode={selectNode}
                   onSelectTruck={selectTruck}
                 />
               </Canvas>
               <div className="pointer-events-none absolute inset-x-5 top-5 flex items-start justify-between gap-3">
-                <div className="rounded-xl border border-cyan-400/30 bg-slate-950/80 px-3 py-2 text-[10px] font-semibold uppercase tracking-[0.22em] text-cyan-200 backdrop-blur">{selectedView === 'AR VIEW' ? 'INDIA TERRAIN AR' : '3D INDIA TERRAIN'}</div>
+                <div className="rounded-xl border border-cyan-400/30 bg-slate-950/80 px-3 py-2 text-[10px] font-semibold uppercase tracking-[0.22em] text-cyan-200 backdrop-blur">{selectedView === 'AR VIEW' ? 'AR TERRAIN DIGITAL TWIN' : '3D INDIA TERRAIN'}</div>
                 <div className="flex gap-2">
                   <span className="rounded-xl border border-emerald-400/30 bg-slate-950/80 px-3 py-2 text-[10px] uppercase tracking-[0.16em] text-emerald-300">LIVE TRACKING</span>
                   {selectedView === 'AR VIEW' && <button type="button" onClick={launchAR} disabled={!arSupported} className="pointer-events-auto rounded-xl border border-cyan-400/40 bg-slate-950/90 px-3 py-2 text-[10px] uppercase tracking-[0.16em] text-cyan-200 disabled:opacity-40">{arActive ? 'AR ACTIVE' : arSupported ? 'PLACE IN AR' : 'AR FALLBACK'}</button>}
@@ -291,4 +286,3 @@ export default function MapPage() {
     </div>
   )
 }
-
