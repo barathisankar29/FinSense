@@ -408,7 +408,8 @@ def apply_simulation(asset_id: str, payload: Dict[str, Any]):
 
 @app.post('/api/assets/{asset_id}/financing/attempt', response_model=FinancingAttemptResponse)
 def attempt_financing(asset_id: str, req: FinancingAttemptRequest):
-    asset = find_asset(asset_id)
+    target_asset_id = req.assetId or asset_id
+    asset = find_asset(target_asset_id)
     return evaluate_financing_request(
         asset_id=asset.assetId,
         product_name=asset.productName,

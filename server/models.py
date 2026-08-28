@@ -193,7 +193,7 @@ class SimulationResponse(BaseModel):
     explanation: str
 
 class FinancingAttemptRequest(BaseModel):
-    assetId: str
+    assetId: Optional[str] = None
     provider: str
     requestedAmount: float
     instrument: str
