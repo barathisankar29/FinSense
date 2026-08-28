@@ -34,17 +34,32 @@ jobs:
         working-directory: client
         run: npm ci
 
-      - name: Build FinSense frontend
+      - name: Build frontend
         working-directory: client
         run: npm run build
+
+      - name: Verify build output
+        working-directory: client
+        run: |
+          echo "===== DIST CONTENTS ====="
+          find dist -maxdepth 3 -type f | sort
+
+          echo "===== INDEX.HTML ====="
+          cat dist/index.html
+
+          echo "===== CSS FILES ====="
+          find dist/assets -name "*.css" -print
+
+          echo "===== JS FILES ====="
+          find dist/assets -name "*.js" -print
 
       - name: Setup GitHub Pages
         uses: actions/configure-pages@v5
 
-      - name: Upload website artifact
+      - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./client/dist
+          path: client/dist
 
   deploy:
     runs-on: ubuntu-latest
@@ -55,6 +70,6 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
 
     steps:
-      - name: Deploy FinSense
+      - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
