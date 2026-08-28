@@ -1,0 +1,1543 @@
+[
+  {
+    "id": "as-1042",
+    "assetId": "AS-1042",
+    "productName": "1,000 High-End Enterprise Laptops",
+    "category": "Consumer Electronics",
+    "batchNumber": "BATCH-2026-LPX-1042",
+    "palletCode": "PALLET A-1042",
+    "stage": "IN_TRANSIT",
+    "quantity": 1000,
+    "unit": "Units",
+    "location": "Pune Expressway (KM 42), Maharashtra",
+    "destination": "Nhava Sheva Port, Mumbai",
+    "carrier": "BlueDart Freight Logistics",
+    "lat": 18.7522,
+    "lng": 73.4055,
+    "verificationConfidence": 94,
+    "conditionStatus": "Nominal / Sealed Container",
+    "lastInspectionDate": "2026-08-28 09:30 IST",
+    "temperatureC": 22.4,
+    "humidityPct": 48.0,
+    "currentVal": 5000000.0,
+    "originalVal": 5000000.0,
+    "existingFin": 1500000.0,
+    "expectedDays": 18,
+    "buyer": "Chroma Mega Retailers Ltd",
+    "buyerScore": 88,
+    "poNumber": "PO-2026-CHR-8812",
+    "invoiceNumber": "INV-PENDING-TRANSIT",
+    "paymentTerms": "Net 30 from Delivery Receipt",
+    "deliveryDeadline": "2026-09-08",
+    "ownershipStatus": "In-Transit Hypothecated to Lenders",
+    "contractStatus": "Irrevocable Commercial Contract",
+    "incoterms": "DAP (Delivered at Place)",
+    "physRisk": 18,
+    "buyerRisk": 16,
+    "logRisk": 24,
+    "marketRisk": 14,
+    "payRisk": 18,
+    "records": [
+      {
+        "id": "FIN-1042-A",
+        "provider": "HDFC Supply Chain Finance",
+        "instrument": "PO Financing",
+        "amount": 1000000.0,
+        "outstanding": 1000000.0,
+        "status": "ACTIVE",
+        "startDate": "2026-08-10",
+        "interestRate": 8.75
+      },
+      {
+        "id": "FIN-1042-B",
+        "provider": "Axis Trade Capital",
+        "instrument": "In-Transit Line",
+        "amount": 500000.0,
+        "outstanding": 500000.0,
+        "status": "ACTIVE",
+        "startDate": "2026-08-20",
+        "interestRate": 8.9
+      }
+    ],
+    "sources": [
+      {
+        "source": "Warehouse System (WMS)",
+        "field": "Dispatched Units",
+        "value": "1,000 Units",
+        "confidence": 98,
+        "timestamp": "2026-08-27 14:00",
+        "verified": true
+      },
+      {
+        "source": "BlueDart Telematics IoT",
+        "field": "Container GPS / Seal Status",
+        "value": "Seal Intact - En Route Mumbai",
+        "confidence": 95,
+        "timestamp": "2026-08-28 09:30",
+        "verified": true
+      },
+      {
+        "source": "SAP ERP",
+        "field": "Commercial Value",
+        "value": "\u20b950,00,000",
+        "confidence": 99,
+        "timestamp": "2026-08-26 11:00",
+        "verified": true
+      },
+      {
+        "source": "RBI Credit Bureau (CIBIL)",
+        "field": "Buyer Risk Rating",
+        "value": "AAA Stable (Score 88)",
+        "confidence": 94,
+        "timestamp": "2026-08-28 08:00",
+        "verified": true
+      }
+    ],
+    "conflicts": [],
+    "valuations": [
+      {
+        "date": "2026-08-10",
+        "value": 5000000.0,
+        "event": "PO Issuance Verified"
+      },
+      {
+        "date": "2026-08-18",
+        "value": 5000000.0,
+        "event": "Factory Production Sign-off"
+      },
+      {
+        "date": "2026-08-25",
+        "value": 5000000.0,
+        "event": "Bill of Lading Dispatched"
+      }
+    ],
+    "riskHistory": [
+      {
+        "date": "2026-08-10",
+        "riskScore": 35,
+        "event": "PO Baseline Created"
+      },
+      {
+        "date": "2026-08-18",
+        "riskScore": 24,
+        "event": "Production Completed Nominal"
+      },
+      {
+        "date": "2026-08-27",
+        "riskScore": 20,
+        "event": "Transit Dispatched & Sealed"
+      }
+    ],
+    "decisionTrail": [
+      {
+        "time": "09:42 IST",
+        "event": "Shipment Verified",
+        "description": "IoT seal and GPS coordinates verified on Pune Expressway",
+        "dataSources": [
+          "BlueDart Telematics",
+          "WMS Scan"
+        ],
+        "confidence": 95,
+        "impact": "Physical State Confirmed"
+      },
+      {
+        "time": "09:44 IST",
+        "event": "Asset Valuation Calibrated",
+        "description": "Market price check confirms \u20b950.0L liquidation parity",
+        "dataSources": [
+          "SAP ERP",
+          "Commodity Index"
+        ],
+        "confidence": 99,
+        "impact": "LTV ceiling locked at 75%"
+      },
+      {
+        "time": "09:45 IST",
+        "event": "Buyer Risk Verified",
+        "description": "Chroma Retailers historical payment lag is 1.2 days (AAA class)",
+        "dataSources": [
+          "CIBIL Commercial",
+          "GST Feed"
+        ],
+        "confidence": 94,
+        "impact": "Risk Discount set to minimal 5%"
+      },
+      {
+        "time": "09:46 IST",
+        "event": "Existing Exposure Calculated",
+        "description": "Active financing of \u20b915.0L across HDFC (\u20b910L) & Axis (\u20b95L)",
+        "dataSources": [
+          "Financing Shield Registry"
+        ],
+        "confidence": 100,
+        "impact": "Remaining Safe Capacity: \u20b916.25L"
+      },
+      {
+        "time": "09:48 IST",
+        "event": "Instrument Transition Selected",
+        "description": "In-Transit Financing selected as asset is currently moving under carrier custody",
+        "dataSources": [
+          "Lifecycle Engine"
+        ],
+        "confidence": 94,
+        "impact": "Instrument assigned"
+      },
+      {
+        "time": "09:49 IST",
+        "event": "Financing Tranche Recommended",
+        "description": "AI recommends unlocking \u20b93,00,000 additional working capital to supplier",
+        "dataSources": [
+          "FlowCapital Deterministic Core"
+        ],
+        "confidence": 94,
+        "impact": "Action: Provide additional financing"
+      }
+    ],
+    "events": [
+      {
+        "id": "EVT-1042-1",
+        "timestamp": "2026-08-10 10:00",
+        "stage": "PO_CREATED",
+        "eventType": "PO_CREATED",
+        "description": "Commercial Purchase Order issued for 1000 units",
+        "severity": "INFO",
+        "source": "ERP",
+        "impact": "PO Financing unlocked"
+      },
+      {
+        "id": "EVT-1042-2",
+        "timestamp": "2026-08-18 16:30",
+        "stage": "PRODUCTION",
+        "eventType": "PRODUCTION_COMPLETED",
+        "description": "Finished goods quality test passed 100%",
+        "severity": "INFO",
+        "source": "MES",
+        "impact": "Capacity +\u20b95L"
+      },
+      {
+        "id": "EVT-1042-3",
+        "timestamp": "2026-08-27 11:15",
+        "stage": "IN_TRANSIT",
+        "eventType": "SHIPMENT_DISPATCHED",
+        "description": "Loaded onto BlueDart container truck with smart GPS seal",
+        "severity": "INFO",
+        "source": "IoT Gate",
+        "impact": "In-Transit instrument activated"
+      }
+    ],
+    "waypoints": [
+      {
+        "name": "Foxconn Assembly Plant (Chakan, Pune)",
+        "lat": 18.7606,
+        "lng": 73.8643,
+        "status": "COMPLETED",
+        "timestamp": "Aug 27, 09:00"
+      },
+      {
+        "name": "Pune Expressway Checkpoint (KM 42)",
+        "lat": 18.7522,
+        "lng": 73.4055,
+        "status": "CURRENT",
+        "timestamp": "Aug 28, 09:30 (Live)"
+      },
+      {
+        "name": "Nhava Sheva Container Freight Station",
+        "lat": 18.9499,
+        "lng": 72.9515,
+        "status": "PENDING",
+        "timestamp": "ETA Aug 28, 16:00"
+      },
+      {
+        "name": "Chroma Central Fulfillment Center (Bhiwandi)",
+        "lat": 19.2967,
+        "lng": 73.0631,
+        "status": "PENDING",
+        "timestamp": "ETA Aug 29, 10:00"
+      }
+    ]
+  },
+  {
+    "id": "as-1043",
+    "assetId": "AS-1043",
+    "productName": "500 5G Flagship Smartphones",
+    "category": "Mobile Devices",
+    "batchNumber": "BATCH-2026-SMP-1043",
+    "palletCode": "PALLET B-1043",
+    "stage": "PRODUCTION",
+    "quantity": 500,
+    "unit": "Units",
+    "location": "Foxconn Electronics Park, Sriperumbudur, Tamil Nadu",
+    "destination": "Reliance Retail Hub, Hyderabad",
+    "carrier": "Internal Production Logistics",
+    "lat": 12.9716,
+    "lng": 79.9414,
+    "verificationConfidence": 92,
+    "conditionStatus": "Assembly & SMT in Progress",
+    "lastInspectionDate": "2026-08-28 11:00 IST",
+    "temperatureC": 21.0,
+    "humidityPct": 42.0,
+    "currentVal": 3200000.0,
+    "originalVal": 3200000.0,
+    "existingFin": 1200000.0,
+    "expectedDays": 24,
+    "buyer": "Reliance Digital Networks Ltd",
+    "buyerScore": 92,
+    "poNumber": "PO-2026-REL-4491",
+    "invoiceNumber": "INV-NOT-ISSUED",
+    "paymentTerms": "Net 30 on Delivery",
+    "deliveryDeadline": "2026-09-15",
+    "ownershipStatus": "Work-in-Progress Hypothecated",
+    "contractStatus": "Confirmed Master Agreement",
+    "incoterms": "FCA (Free Carrier)",
+    "physRisk": 15,
+    "buyerRisk": 12,
+    "logRisk": 18,
+    "marketRisk": 15,
+    "payRisk": 14,
+    "records": [
+      {
+        "id": "FIN-1043-A",
+        "provider": "State Bank of India Trade",
+        "instrument": "Procurement Financing",
+        "amount": 1200000.0,
+        "outstanding": 1200000.0,
+        "status": "ACTIVE",
+        "startDate": "2026-08-14",
+        "interestRate": 8.5
+      }
+    ],
+    "sources": [
+      {
+        "source": "MES Production Floor",
+        "field": "SMT Assembly Progress",
+        "value": "84% Complete",
+        "confidence": 96,
+        "timestamp": "2026-08-28 11:00",
+        "verified": true
+      },
+      {
+        "source": "SAP ERP",
+        "field": "Bill of Materials Cost",
+        "value": "\u20b924,50,000 Disbursed",
+        "confidence": 98,
+        "timestamp": "2026-08-27 17:00",
+        "verified": true
+      }
+    ],
+    "conflicts": [],
+    "valuations": [
+      {
+        "date": "2026-08-14",
+        "value": 3200000.0,
+        "event": "PO Verified"
+      },
+      {
+        "date": "2026-08-22",
+        "value": 3200000.0,
+        "event": "Raw Components Sourced"
+      }
+    ],
+    "riskHistory": [
+      {
+        "date": "2026-08-14",
+        "riskScore": 28,
+        "event": "PO Baseline"
+      },
+      {
+        "date": "2026-08-28",
+        "riskScore": 16,
+        "event": "Production on Schedule"
+      }
+    ],
+    "decisionTrail": [
+      {
+        "time": "11:15 IST",
+        "event": "BOM Verification",
+        "description": "Raw materials assembled, assembly stage reached 84%",
+        "dataSources": [
+          "MES Floor Telemetry"
+        ],
+        "confidence": 96,
+        "impact": "Procurement limit active"
+      }
+    ],
+    "events": [
+      {
+        "id": "EVT-1043-1",
+        "timestamp": "2026-08-14 09:00",
+        "stage": "PO_CREATED",
+        "eventType": "PO_CREATED",
+        "description": "Order placed for 500 units by Reliance Digital",
+        "severity": "INFO",
+        "source": "ERP",
+        "impact": "Procurement Line Open"
+      }
+    ],
+    "waypoints": [
+      {
+        "name": "Sriperumbudur Manufacturing Facility",
+        "lat": 12.9716,
+        "lng": 79.9414,
+        "status": "CURRENT",
+        "timestamp": "Aug 28 (In Production)"
+      },
+      {
+        "name": "Chennai Distribution Hub",
+        "lat": 13.0827,
+        "lng": 80.2707,
+        "status": "PENDING",
+        "timestamp": "ETA Sep 02"
+      },
+      {
+        "name": "Hyderabad Reliance Retail Depot",
+        "lat": 17.385,
+        "lng": 78.4867,
+        "status": "PENDING",
+        "timestamp": "ETA Sep 05"
+      }
+    ]
+  },
+  {
+    "id": "as-1044",
+    "assetId": "AS-1044",
+    "productName": "Precision CNC Machinery & Components",
+    "category": "Heavy Industrial Equipment",
+    "batchNumber": "BATCH-2026-CNC-1044",
+    "palletCode": "PALLET C-1044",
+    "stage": "WAREHOUSE",
+    "quantity": 40,
+    "unit": "Heavy Crates",
+    "location": "Khed Logistics City Warehouse Bay 7, Pune",
+    "destination": "L&T Heavy Engineering, Hazira, Gujarat",
+    "carrier": "Mahindra Logistics Heavy Haul",
+    "lat": 18.8415,
+    "lng": 73.9142,
+    "verificationConfidence": 76,
+    "conditionStatus": "Environmental Alert: Temp 34.2\u00b0C (Limit 28\u00b0C)",
+    "lastInspectionDate": "2026-08-28 08:00 IST",
+    "temperatureC": 34.2,
+    "humidityPct": 72.0,
+    "currentVal": 7200000.0,
+    "originalVal": 7200000.0,
+    "existingFin": 3800000.0,
+    "expectedDays": 32,
+    "buyer": "Larsen & Toubro Heavy Engineering",
+    "buyerScore": 86,
+    "poNumber": "PO-2026-LT-9012",
+    "invoiceNumber": "INV-HOLD-INSPECTION",
+    "paymentTerms": "Net 45 on Commissioning Acceptance",
+    "deliveryDeadline": "2026-09-28",
+    "ownershipStatus": "Warehouse Receipt Lien Active",
+    "contractStatus": "Conditional Acceptance Pending Audit",
+    "incoterms": "DDP (Delivered Duty Paid)",
+    "physRisk": 65,
+    "buyerRisk": 20,
+    "logRisk": 45,
+    "marketRisk": 30,
+    "payRisk": 48,
+    "records": [
+      {
+        "id": "FIN-1044-A",
+        "provider": "HDFC Industrial Credit",
+        "instrument": "Warehouse Financing",
+        "amount": 2000000.0,
+        "outstanding": 2000000.0,
+        "status": "ACTIVE",
+        "startDate": "2026-08-01",
+        "interestRate": 9.1
+      },
+      {
+        "id": "FIN-1044-B",
+        "provider": "ICICI Trade Finance",
+        "instrument": "Inventory Line",
+        "amount": 1000000.0,
+        "outstanding": 1000000.0,
+        "status": "ACTIVE",
+        "startDate": "2026-08-05",
+        "interestRate": 9.25
+      },
+      {
+        "id": "FIN-1044-C",
+        "provider": "Tata Capital Trade",
+        "instrument": "Working Capital Loan",
+        "amount": 800000.0,
+        "outstanding": 800000.0,
+        "status": "ACTIVE",
+        "startDate": "2026-08-12",
+        "interestRate": 9.5
+      }
+    ],
+    "sources": [
+      {
+        "source": "SAP ERP",
+        "field": "Stated Quantity",
+        "value": "40 Heavy Crates",
+        "confidence": 98,
+        "timestamp": "2026-08-28 08:00",
+        "verified": true
+      },
+      {
+        "source": "Warehouse WMS (Bay 7)",
+        "field": "Physical Barcode Scan",
+        "value": "36 Heavy Crates Verified",
+        "confidence": 78,
+        "timestamp": "2026-08-28 08:15",
+        "verified": false
+      },
+      {
+        "source": "Warehouse IoT Sensors",
+        "field": "Ambient Temperature",
+        "value": "34.2\u00b0C (Warning Threshold >28\u00b0C)",
+        "confidence": 92,
+        "timestamp": "2026-08-28 09:00",
+        "verified": true
+      }
+    ],
+    "conflicts": [
+      {
+        "field": "Physical Quantity / Units In Stock",
+        "sourceA": "SAP ERP",
+        "valueA": "40 Heavy Crates",
+        "sourceB": "Warehouse WMS Bay 7",
+        "valueB": "36 Heavy Crates Verified",
+        "discrepancy": "Discrepancy of 4 crates (10% variance, ~\u20b97.2L potential shrinkage)",
+        "resolution": "Pause additional credit lines until manual physical audit & CCTV reconciliation completes.",
+        "confidence": 78
+      }
+    ],
+    "valuations": [
+      {
+        "date": "2026-08-01",
+        "value": 7200000.0,
+        "event": "PO Receipt"
+      },
+      {
+        "date": "2026-08-20",
+        "value": 7200000.0,
+        "event": "Warehouse Storage Check"
+      },
+      {
+        "date": "2026-08-28",
+        "value": 6800000.0,
+        "event": "Uncertainty Discount Applied (-\u20b94L)"
+      }
+    ],
+    "riskHistory": [
+      {
+        "date": "2026-08-01",
+        "riskScore": 30,
+        "event": "Normal Ingestion"
+      },
+      {
+        "date": "2026-08-20",
+        "riskScore": 42,
+        "event": "Storage Temperature Warning"
+      },
+      {
+        "date": "2026-08-28",
+        "riskScore": 68,
+        "event": "Discrepancy & Environmental Spike"
+      }
+    ],
+    "decisionTrail": [
+      {
+        "time": "08:15 IST",
+        "event": "Quantity Discrepancy Detected",
+        "description": "ERP states 40 crates, WMS barcode pass registers only 36 crates",
+        "dataSources": [
+          "SAP ERP",
+          "WMS Bay 7"
+        ],
+        "confidence": 78,
+        "impact": "Triggered Data Truth Conflict"
+      },
+      {
+        "time": "08:20 IST",
+        "event": "Financing Freeze Mandated",
+        "description": "Deterministic engine freezes available financing capacity to protect lenders",
+        "dataSources": [
+          "Financing Shield"
+        ],
+        "confidence": 98,
+        "impact": "Blocked Drawdown Requests"
+      }
+    ],
+    "events": [
+      {
+        "id": "EVT-1044-1",
+        "timestamp": "2026-08-01 10:00",
+        "stage": "PO_CREATED",
+        "eventType": "PO_CREATED",
+        "description": "Contract signed with L&T",
+        "severity": "INFO",
+        "source": "ERP",
+        "impact": "Initial line opened"
+      },
+      {
+        "id": "EVT-1044-2",
+        "timestamp": "2026-08-28 08:15",
+        "stage": "WAREHOUSE",
+        "eventType": "DATA_DISCREPANCY",
+        "description": "4 crates missing during morning cycle count",
+        "severity": "CRITICAL",
+        "source": "WMS",
+        "impact": "Financing paused"
+      }
+    ],
+    "waypoints": [
+      {
+        "name": "Talegaon Heavy Forging Yard",
+        "lat": 18.7289,
+        "lng": 73.6811,
+        "status": "COMPLETED",
+        "timestamp": "Aug 15"
+      },
+      {
+        "name": "Khed Logistics Warehouse (Bay 7)",
+        "lat": 18.8415,
+        "lng": 73.9142,
+        "status": "CURRENT",
+        "timestamp": "Aug 28 (Hold / Audit)"
+      },
+      {
+        "name": "L&T Hazira Manufacturing Complex",
+        "lat": 21.1167,
+        "lng": 72.65,
+        "status": "PENDING",
+        "timestamp": "ETA Sep 28"
+      }
+    ]
+  },
+  {
+    "id": "as-1045",
+    "assetId": "AS-1045",
+    "productName": "Sustainable Organic Cotton Export Textiles",
+    "category": "Apparel & Textiles",
+    "batchNumber": "BATCH-2026-TEX-1045",
+    "palletCode": "PALLET D-1045",
+    "stage": "RECEIVABLE",
+    "quantity": 12000,
+    "unit": "Meters",
+    "location": "Tirupur Textile Export Terminal, Tamil Nadu",
+    "destination": "Zara International Distribution, Valencia, Spain",
+    "carrier": "Maersk Ocean Shipping",
+    "lat": 11.1085,
+    "lng": 77.3411,
+    "verificationConfidence": 96,
+    "conditionStatus": "Delivered & Accepted / Invoice Matured",
+    "lastInspectionDate": "2026-08-27 18:00 IST",
+    "temperatureC": 24.0,
+    "humidityPct": 50.0,
+    "currentVal": 1800000.0,
+    "originalVal": 1800000.0,
+    "existingFin": 1400000.0,
+    "expectedDays": 6,
+    "buyer": "Inditex / Zara Global Sourcing",
+    "buyerScore": 95,
+    "poNumber": "PO-2026-ZAR-7731",
+    "invoiceNumber": "INV-2026-TEX-9941",
+    "paymentTerms": "Net 30 (Matures in 6 Days)",
+    "deliveryDeadline": "2026-08-20 (Fulfilled)",
+    "ownershipStatus": "Delivered / Receivable Assigned to Financier",
+    "contractStatus": "Accepted / Settlement Impending",
+    "incoterms": "FOB Chennai Port",
+    "physRisk": 8,
+    "buyerRisk": 10,
+    "logRisk": 12,
+    "marketRisk": 12,
+    "payRisk": 10,
+    "records": [
+      {
+        "id": "FIN-1045-A",
+        "provider": "Kotak Mahindra Trade Factoring",
+        "instrument": "Receivables Financing",
+        "amount": 1400000.0,
+        "outstanding": 1400000.0,
+        "status": "ACTIVE",
+        "startDate": "2026-08-15",
+        "interestRate": 8.2
+      }
+    ],
+    "sources": [
+      {
+        "source": "Zara Buyer Portal API",
+        "field": "Goods Acceptance",
+        "value": "100% Verified Clean Delivery",
+        "confidence": 99,
+        "timestamp": "2026-08-26 16:00",
+        "verified": true
+      },
+      {
+        "source": "SWIFT MT103 Feed",
+        "field": "Remittance Schedule",
+        "value": "Scheduled for Sep 03, 2026",
+        "confidence": 96,
+        "timestamp": "2026-08-27 12:00",
+        "verified": true
+      }
+    ],
+    "conflicts": [],
+    "valuations": [
+      {
+        "date": "2026-08-01",
+        "value": 1800000.0,
+        "event": "PO Verified"
+      },
+      {
+        "date": "2026-08-20",
+        "value": 1800000.0,
+        "event": "Port Acceptance"
+      },
+      {
+        "date": "2026-08-26",
+        "value": 1800000.0,
+        "event": "Clean Acceptance Invoice Signed"
+      }
+    ],
+    "riskHistory": [
+      {
+        "date": "2026-08-01",
+        "riskScore": 25,
+        "event": "PO Created"
+      },
+      {
+        "date": "2026-08-26",
+        "riskScore": 10,
+        "event": "Acceptance Signed (Low Risk)"
+      }
+    ],
+    "decisionTrail": [
+      {
+        "time": "16:00 IST",
+        "event": "Receivable Factoring Cleared",
+        "description": "Zara acceptance receipt verified on SWIFT gateway",
+        "dataSources": [
+          "Zara API",
+          "SWIFT Gateway"
+        ],
+        "confidence": 99,
+        "impact": "Eligible for 90% LTV factoring"
+      }
+    ],
+    "events": [
+      {
+        "id": "EVT-1045-1",
+        "timestamp": "2026-08-26 16:00",
+        "stage": "RECEIVABLE",
+        "eventType": "INVOICE_ACCEPTED",
+        "description": "Customer accepted delivery with zero disputes",
+        "severity": "INFO",
+        "source": "Buyer Portal",
+        "impact": "Transitioned to Receivables Financing"
+      }
+    ],
+    "waypoints": [
+      {
+        "name": "Tirupur Garment Complex",
+        "lat": 11.1085,
+        "lng": 77.3411,
+        "status": "COMPLETED",
+        "timestamp": "Aug 05"
+      },
+      {
+        "name": "Chennai Port Container Terminal",
+        "lat": 13.0827,
+        "lng": 80.2707,
+        "status": "COMPLETED",
+        "timestamp": "Aug 12"
+      },
+      {
+        "name": "Port of Valencia (Spain)",
+        "lat": 39.4699,
+        "lng": -0.3763,
+        "status": "COMPLETED",
+        "timestamp": "Aug 25 (Delivered)"
+      }
+    ]
+  },
+  {
+    "id": "as-1046",
+    "assetId": "AS-1046",
+    "productName": "Commercial EV Battery Packs (72 kWh)",
+    "category": "Clean Tech & Automotive",
+    "batchNumber": "BATCH-2026-BAT-1046",
+    "palletCode": "PALLET E-1046",
+    "stage": "IN_TRANSIT",
+    "quantity": 25,
+    "unit": "Heavy Pack Units",
+    "location": "NH48 Highway Bypass, Kolhapur Sector, Maharashtra",
+    "destination": "Tata Motors EV Plant, Sanand, Gujarat",
+    "carrier": "Safexpress Hazmat Fleet",
+    "lat": 16.705,
+    "lng": 74.2433,
+    "verificationConfidence": 84,
+    "conditionStatus": "Weather Delay (Heavy Monsoon Inundation on NH48)",
+    "lastInspectionDate": "2026-08-28 07:45 IST",
+    "temperatureC": 26.5,
+    "humidityPct": 88.0,
+    "currentVal": 4500000.0,
+    "originalVal": 4500000.0,
+    "existingFin": 2000000.0,
+    "expectedDays": 22,
+    "buyer": "Tata Motors Commercial EV Division",
+    "buyerScore": 89,
+    "poNumber": "PO-2026-TAT-1194",
+    "invoiceNumber": "INV-PENDING-TRANSIT",
+    "paymentTerms": "Net 30 on Plant Gate Entry",
+    "deliveryDeadline": "2026-09-02 (Delay Risk Projected)",
+    "ownershipStatus": "In-Transit Hypothecated to SBI",
+    "contractStatus": "Irrevocable Commercial Contract",
+    "incoterms": "DAP Sanand",
+    "physRisk": 35,
+    "buyerRisk": 15,
+    "logRisk": 72,
+    "marketRisk": 25,
+    "payRisk": 38,
+    "records": [
+      {
+        "id": "FIN-1046-A",
+        "provider": "State Bank of India Supply Chain",
+        "instrument": "In-Transit Financing",
+        "amount": 2000000.0,
+        "outstanding": 2000000.0,
+        "status": "ACTIVE",
+        "startDate": "2026-08-18",
+        "interestRate": 8.85
+      }
+    ],
+    "sources": [
+      {
+        "source": "Safexpress Hazmat GPS",
+        "field": "Transit Speed & Telematics",
+        "value": "0 km/h (Flooding Halt for 14 hrs)",
+        "confidence": 94,
+        "timestamp": "2026-08-28 07:45",
+        "verified": true
+      },
+      {
+        "source": "National Highway Weather Radar",
+        "field": "Road Accessibility Status",
+        "value": "Red Alert Flood Warning NH48 Kolhapur",
+        "confidence": 91,
+        "timestamp": "2026-08-28 08:30",
+        "verified": true
+      }
+    ],
+    "conflicts": [],
+    "valuations": [
+      {
+        "date": "2026-08-18",
+        "value": 4500000.0,
+        "event": "PO Loaded"
+      },
+      {
+        "date": "2026-08-28",
+        "value": 4500000.0,
+        "event": "Transit Valuation Retained"
+      }
+    ],
+    "riskHistory": [
+      {
+        "date": "2026-08-18",
+        "riskScore": 26,
+        "event": "Dispatched Nominal"
+      },
+      {
+        "date": "2026-08-28",
+        "riskScore": 62,
+        "event": "Weather Inundation & Halt"
+      }
+    ],
+    "decisionTrail": [
+      {
+        "time": "07:45 IST",
+        "event": "Logistics Anomaly Detected",
+        "description": "Truck stationary for 14 hours due to flooded NH48 bypass",
+        "dataSources": [
+          "Safexpress Telematics",
+          "NHAI Feed"
+        ],
+        "confidence": 94,
+        "impact": "Logistics Risk increased to 72/100"
+      },
+      {
+        "time": "08:00 IST",
+        "event": "Financing Cap Re-evaluation",
+        "description": "Early warning issued: avoid additional drawdowns until highway clears",
+        "dataSources": [
+          "Risk Engine"
+        ],
+        "confidence": 92,
+        "impact": "Capacity frozen at current limit"
+      }
+    ],
+    "events": [
+      {
+        "id": "EVT-1046-1",
+        "timestamp": "2026-08-28 07:45",
+        "stage": "IN_TRANSIT",
+        "eventType": "WEATHER_DELAY",
+        "description": "Carrier delayed 3 days due to extreme monsoon flash floods on NH48",
+        "severity": "WARNING",
+        "source": "Telematics",
+        "impact": "Risk increased +36pts"
+      }
+    ],
+    "waypoints": [
+      {
+        "name": "Bengaluru Battery Gigafactory",
+        "lat": 12.9716,
+        "lng": 77.5946,
+        "status": "COMPLETED",
+        "timestamp": "Aug 22"
+      },
+      {
+        "name": "Kolhapur Highway Sector (Stationary)",
+        "lat": 16.705,
+        "lng": 74.2433,
+        "status": "CURRENT",
+        "timestamp": "Aug 28 (Weather Delay)"
+      },
+      {
+        "name": "Tata Motors EV Assembly Plant (Sanand)",
+        "lat": 22.9868,
+        "lng": 72.38,
+        "status": "PENDING",
+        "timestamp": "ETA Revised Sep 05"
+      }
+    ]
+  },
+  {
+    "id": "as-1047",
+    "assetId": "AS-1047",
+    "productName": "Commercial Bifacial Solar Inverters (250 kW)",
+    "category": "Renewable Energy Infrastructure",
+    "batchNumber": "BATCH-2026-SLR-1047",
+    "palletCode": "PALLET F-1047",
+    "stage": "PO_CREATED",
+    "quantity": 30,
+    "unit": "Heavy Inverters",
+    "location": "Mundra Port Manufacturing SEZ, Gujarat",
+    "destination": "CleanMax Solar Farm, Bhadla, Rajasthan",
+    "carrier": "Pending Production Dispatch",
+    "lat": 22.8396,
+    "lng": 69.7258,
+    "verificationConfidence": 95,
+    "conditionStatus": "PO Confirmed / Raw Materials Procured",
+    "lastInspectionDate": "2026-08-28 10:00 IST",
+    "temperatureC": 28.0,
+    "humidityPct": 45.0,
+    "currentVal": 6000000.0,
+    "originalVal": 6000000.0,
+    "existingFin": 1000000.0,
+    "expectedDays": 45,
+    "buyer": "CleanMax Renewable Infra Ltd",
+    "buyerScore": 91,
+    "poNumber": "PO-2026-CLM-3301",
+    "invoiceNumber": "INV-NOT-ISSUED",
+    "paymentTerms": "LC 60 Days / Net 30 Post Commissioning",
+    "deliveryDeadline": "2026-10-15",
+    "ownershipStatus": "Purchase Order Backed Hypothecation",
+    "contractStatus": "Irrevocable Commercial PO Verified",
+    "incoterms": "FOB Mundra",
+    "physRisk": 14,
+    "buyerRisk": 12,
+    "logRisk": 16,
+    "marketRisk": 18,
+    "payRisk": 15,
+    "records": [
+      {
+        "id": "FIN-1047-A",
+        "provider": "Yes Bank Green Trade",
+        "instrument": "PO Financing",
+        "amount": 1000000.0,
+        "outstanding": 1000000.0,
+        "status": "ACTIVE",
+        "startDate": "2026-08-22",
+        "interestRate": 8.4
+      }
+    ],
+    "sources": [
+      {
+        "source": "CleanMax Procurement API",
+        "field": "PO Validity & Escrow Letter",
+        "value": "Irrevocable Bank LC Issued",
+        "confidence": 98,
+        "timestamp": "2026-08-22 14:00",
+        "verified": true
+      }
+    ],
+    "conflicts": [],
+    "valuations": [
+      {
+        "date": "2026-08-22",
+        "value": 6000000.0,
+        "event": "PO Verified"
+      }
+    ],
+    "riskHistory": [
+      {
+        "date": "2026-08-22",
+        "riskScore": 18,
+        "event": "PO Established"
+      }
+    ],
+    "decisionTrail": [
+      {
+        "time": "10:00 IST",
+        "event": "PO Financing Headroom Verified",
+        "description": "LC coverage confirms high security margin. LTV capped at 50% for PO stage.",
+        "dataSources": [
+          "CleanMax LC Feed"
+        ],
+        "confidence": 98,
+        "impact": "Safe exposure \u20b926.0L"
+      }
+    ],
+    "events": [
+      {
+        "id": "EVT-1047-1",
+        "timestamp": "2026-08-22 14:00",
+        "stage": "PO_CREATED",
+        "eventType": "PO_CREATED",
+        "description": "Order approved for 30 solar inverters",
+        "severity": "INFO",
+        "source": "ERP",
+        "impact": "Eligible for PO Advance"
+      }
+    ],
+    "waypoints": [
+      {
+        "name": "Mundra Solar Manufacturing Zone",
+        "lat": 22.8396,
+        "lng": 69.7258,
+        "status": "CURRENT",
+        "timestamp": "Aug 28 (PO Active)"
+      },
+      {
+        "name": "Bhadla Solar Park Installation Site",
+        "lat": 27.5385,
+        "lng": 71.9175,
+        "status": "PENDING",
+        "timestamp": "ETA Oct 15"
+      }
+    ]
+  },
+  {
+    "id": "as-1048",
+    "assetId": "AS-1048",
+    "productName": "Active Pharmaceutical Ingredients (API)",
+    "category": "Pharmaceuticals & BioTech",
+    "batchNumber": "BATCH-2026-PHR-1048",
+    "palletCode": "PALLET G-1048",
+    "stage": "FINISHED_GOODS",
+    "quantity": 500,
+    "unit": "Cold Kilograms",
+    "location": "Genome Valley Cold Bio-Depot, Hyderabad",
+    "destination": "Sun Pharma Formulations Plant, Halol, Gujarat",
+    "carrier": "ColdChain BioLogistics",
+    "lat": 17.5369,
+    "lng": 78.5847,
+    "verificationConfidence": 97,
+    "conditionStatus": "Ultra-Cold Storage -20\u00b0C Monitored OK",
+    "lastInspectionDate": "2026-08-28 11:30 IST",
+    "temperatureC": -20.4,
+    "humidityPct": 30.0,
+    "currentVal": 8500000.0,
+    "originalVal": 8500000.0,
+    "existingFin": 3500000.0,
+    "expectedDays": 15,
+    "buyer": "Sun Pharma Industries Ltd",
+    "buyerScore": 96,
+    "poNumber": "PO-2026-SUN-5519",
+    "invoiceNumber": "INV-PENDING-RELEASE",
+    "paymentTerms": "Net 30 on Quality Assay Certificate",
+    "deliveryDeadline": "2026-09-12",
+    "ownershipStatus": "Finished Inventory Hypothecated to HDFC",
+    "contractStatus": "Irrevocable Commercial PO Verified",
+    "incoterms": "Ex-Works Hyderabad",
+    "physRisk": 12,
+    "buyerRisk": 8,
+    "logRisk": 14,
+    "marketRisk": 16,
+    "payRisk": 10,
+    "records": [
+      {
+        "id": "FIN-1048-A",
+        "provider": "HDFC Healthcare Credit",
+        "instrument": "Inventory Financing",
+        "amount": 3500000.0,
+        "outstanding": 3500000.0,
+        "status": "ACTIVE",
+        "startDate": "2026-08-16",
+        "interestRate": 8.15
+      }
+    ],
+    "sources": [
+      {
+        "source": "BioLogistics IoT Cold Sensor",
+        "field": "Temperature Telemetry",
+        "value": "-20.4\u00b0C (Pass 100%)",
+        "confidence": 99,
+        "timestamp": "2026-08-28 11:30",
+        "verified": true
+      },
+      {
+        "source": "USFDA Compliance Ledger",
+        "field": "Batch Release Certificate",
+        "value": "Assay Purity 99.8% Certified",
+        "confidence": 98,
+        "timestamp": "2026-08-27 16:00",
+        "verified": true
+      }
+    ],
+    "conflicts": [],
+    "valuations": [
+      {
+        "date": "2026-08-16",
+        "value": 8500000.0,
+        "event": "Batch Production Sign-off"
+      }
+    ],
+    "riskHistory": [
+      {
+        "date": "2026-08-16",
+        "riskScore": 16,
+        "event": "Bio Batch Verified Nominal"
+      }
+    ],
+    "decisionTrail": [
+      {
+        "time": "11:30 IST",
+        "event": "Cold Chain Continuous Verification",
+        "description": "IoT temperature log uninterrupted for 288 hours. Inventory financing capacity affirmed.",
+        "dataSources": [
+          "IoT BioSensors"
+        ],
+        "confidence": 99,
+        "impact": "High Health Score 91/100"
+      }
+    ],
+    "events": [
+      {
+        "id": "EVT-1048-1",
+        "timestamp": "2026-08-16 12:00",
+        "stage": "FINISHED_GOODS",
+        "eventType": "PRODUCTION_COMPLETED",
+        "description": "API batch completed and stored in cold bay",
+        "severity": "INFO",
+        "source": "MES",
+        "impact": "Inventory financing active"
+      }
+    ],
+    "waypoints": [
+      {
+        "name": "Genome Valley Bio-Depot (Hyderabad)",
+        "lat": 17.5369,
+        "lng": 78.5847,
+        "status": "CURRENT",
+        "timestamp": "Aug 28 (Stored in Cold Bay)"
+      },
+      {
+        "name": "Halol Pharma Formulation Complex",
+        "lat": 22.5024,
+        "lng": 73.4716,
+        "status": "PENDING",
+        "timestamp": "ETA Sep 12"
+      }
+    ]
+  },
+  {
+    "id": "as-1049",
+    "assetId": "AS-1049",
+    "productName": "Aerospace Grade Titanium Fasteners",
+    "category": "Aerospace & Defense",
+    "batchNumber": "BATCH-2026-AERO-1049",
+    "palletCode": "PALLET H-1049",
+    "stage": "INVOICE_GENERATED",
+    "quantity": 50000,
+    "unit": "Precision Units",
+    "location": "HAL Aerospace Tech Park, Bengaluru",
+    "destination": "Boeing India Component Supply Depot, Nagpur",
+    "carrier": "Gati KWE Express Air Cargo",
+    "lat": 12.9611,
+    "lng": 77.6387,
+    "verificationConfidence": 98,
+    "conditionStatus": "Quality Inspection 100% Approved / Invoice Raised",
+    "lastInspectionDate": "2026-08-28 12:00 IST",
+    "temperatureC": 22.0,
+    "humidityPct": 40.0,
+    "currentVal": 3800000.0,
+    "originalVal": 3800000.0,
+    "existingFin": 2600000.0,
+    "expectedDays": 12,
+    "buyer": "Boeing India Commercial Aviation",
+    "buyerScore": 98,
+    "poNumber": "PO-2026-BOE-1049",
+    "invoiceNumber": "INV-2026-BOE-9022",
+    "paymentTerms": "Net 30 (12 Days Remaining)",
+    "deliveryDeadline": "2026-08-25 (Fulfilled)",
+    "ownershipStatus": "Invoice Hypothecated to ICICI",
+    "contractStatus": "Accepted / Invoice Discounted",
+    "incoterms": "CPT Nagpur Cargo Hub",
+    "physRisk": 6,
+    "buyerRisk": 5,
+    "logRisk": 8,
+    "marketRisk": 10,
+    "payRisk": 7,
+    "records": [
+      {
+        "id": "FIN-1049-A",
+        "provider": "ICICI Aerospace Factoring",
+        "instrument": "Invoice Financing",
+        "amount": 2600000.0,
+        "outstanding": 2600000.0,
+        "status": "ACTIVE",
+        "startDate": "2026-08-25",
+        "interestRate": 8.1
+      }
+    ],
+    "sources": [
+      {
+        "source": "Boeing Global Supplier ERP",
+        "field": "Invoice Status",
+        "value": "Approved for Electronic Clearing",
+        "confidence": 100,
+        "timestamp": "2026-08-27 15:00",
+        "verified": true
+      },
+      {
+        "source": "GST E-Invoice Portal",
+        "field": "IRN Number Validation",
+        "value": "IRN-7892-VALID",
+        "confidence": 100,
+        "timestamp": "2026-08-25 10:00",
+        "verified": true
+      }
+    ],
+    "conflicts": [],
+    "valuations": [
+      {
+        "date": "2026-08-10",
+        "value": 3800000.0,
+        "event": "PO Verified"
+      },
+      {
+        "date": "2026-08-25",
+        "value": 3800000.0,
+        "event": "GST E-Invoice Created"
+      }
+    ],
+    "riskHistory": [
+      {
+        "date": "2026-08-10",
+        "riskScore": 20,
+        "event": "PO Ingestion"
+      },
+      {
+        "date": "2026-08-25",
+        "riskScore": 8,
+        "event": "Invoice Cleared"
+      }
+    ],
+    "decisionTrail": [
+      {
+        "time": "12:00 IST",
+        "event": "Invoice Financing Activated",
+        "description": "IRN verified on GSTN portal. Safe advance up to 85% approved.",
+        "dataSources": [
+          "GSTN Portal",
+          "Boeing Supplier API"
+        ],
+        "confidence": 100,
+        "impact": "Invoice Financing active"
+      }
+    ],
+    "events": [
+      {
+        "id": "EVT-1049-1",
+        "timestamp": "2026-08-25 10:00",
+        "stage": "INVOICE_GENERATED",
+        "eventType": "INVOICE_GENERATED",
+        "description": "GST e-invoice created and submitted to Boeing",
+        "severity": "INFO",
+        "source": "ERP",
+        "impact": "Factoring line active"
+      }
+    ],
+    "waypoints": [
+      {
+        "name": "HAL Aerospace Manufacturing Hub",
+        "lat": 12.9611,
+        "lng": 77.6387,
+        "status": "COMPLETED",
+        "timestamp": "Aug 18"
+      },
+      {
+        "name": "Nagpur Boeing Logistics Hub",
+        "lat": 21.1458,
+        "lng": 79.0882,
+        "status": "COMPLETED",
+        "timestamp": "Aug 25 (Delivered)"
+      }
+    ]
+  },
+  {
+    "id": "as-1050",
+    "assetId": "AS-1050",
+    "productName": "Specialty Semiconductor Microchips",
+    "category": "Semiconductor & IoT",
+    "batchNumber": "BATCH-2026-CHIP-1050",
+    "palletCode": "PALLET I-1050",
+    "stage": "DELIVERED",
+    "quantity": 10000,
+    "unit": "Tray Units",
+    "location": "ISRO Space Applications Center Receiving Bay, Ahmedabad",
+    "destination": "ISRO SAC Clean Room 4, Ahmedabad",
+    "carrier": "Secure Armored Logistics",
+    "lat": 23.0225,
+    "lng": 72.5714,
+    "verificationConfidence": 94,
+    "conditionStatus": "Physical Goods Received / Clean Room Assay Underway",
+    "lastInspectionDate": "2026-08-28 10:45 IST",
+    "temperatureC": 20.0,
+    "humidityPct": 35.0,
+    "currentVal": 9400000.0,
+    "originalVal": 9400000.0,
+    "existingFin": 5500000.0,
+    "expectedDays": 8,
+    "buyer": "ISRO Space Applications Center",
+    "buyerScore": 99,
+    "poNumber": "PO-2026-ISR-8802",
+    "invoiceNumber": "INV-2026-CHIP-4410",
+    "paymentTerms": "Net 30 from Clean Acceptance",
+    "deliveryDeadline": "2026-08-30 (Achieved Early)",
+    "ownershipStatus": "Delivered / Acceptance Underway",
+    "contractStatus": "Sovereign Government Contract",
+    "incoterms": "DDP Ahmedabad",
+    "physRisk": 10,
+    "buyerRisk": 2,
+    "logRisk": 6,
+    "marketRisk": 12,
+    "payRisk": 6,
+    "records": [
+      {
+        "id": "FIN-1050-A",
+        "provider": "SBI Sovereign Trade Desk",
+        "instrument": "Trade Financing",
+        "amount": 5500000.0,
+        "outstanding": 5500000.0,
+        "status": "ACTIVE",
+        "startDate": "2026-08-10",
+        "interestRate": 7.95
+      }
+    ],
+    "sources": [
+      {
+        "source": "ISRO Inward Receiving Ledger",
+        "field": "Gate Entry Timestamp",
+        "value": "Aug 28 09:15 Gate Entry Confirmed",
+        "confidence": 98,
+        "timestamp": "2026-08-28 09:15",
+        "verified": true
+      }
+    ],
+    "conflicts": [],
+    "valuations": [
+      {
+        "date": "2026-08-10",
+        "value": 9400000.0,
+        "event": "PO Issuance"
+      },
+      {
+        "date": "2026-08-28",
+        "value": 9400000.0,
+        "event": "Gate Inward Delivery"
+      }
+    ],
+    "riskHistory": [
+      {
+        "date": "2026-08-10",
+        "riskScore": 18,
+        "event": "Baseline"
+      },
+      {
+        "date": "2026-08-28",
+        "riskScore": 8,
+        "event": "Delivery Inward Completed"
+      }
+    ],
+    "decisionTrail": [
+      {
+        "time": "10:45 IST",
+        "event": "Delivery Inward Verified",
+        "description": "Gate pass confirmed. Safe exposure ceiling rises to 82% (\u20b968.5L).",
+        "dataSources": [
+          "ISRO Inward Gate Ledger"
+        ],
+        "confidence": 98,
+        "impact": "Capacity +\u20b913.5L"
+      }
+    ],
+    "events": [
+      {
+        "id": "EVT-1050-1",
+        "timestamp": "2026-08-28 09:15",
+        "stage": "DELIVERED",
+        "eventType": "DELIVERY_CONFIRMED",
+        "description": "Armored delivery truck checked in at ISRO clean room bay",
+        "severity": "INFO",
+        "source": "Gate WMS",
+        "impact": "Delivered status active"
+      }
+    ],
+    "waypoints": [
+      {
+        "name": "Tata Electronics Semiconductor Fab (Dholera)",
+        "lat": 22.25,
+        "lng": 72.2,
+        "status": "COMPLETED",
+        "timestamp": "Aug 24"
+      },
+      {
+        "name": "ISRO Space Applications Center (Ahmedabad)",
+        "lat": 23.0225,
+        "lng": 72.5714,
+        "status": "CURRENT",
+        "timestamp": "Aug 28 (Delivered)"
+      }
+    ]
+  },
+  {
+    "id": "as-1051",
+    "assetId": "AS-1051",
+    "productName": "Precision Autonomous Agricultural Drones",
+    "category": "AgriTech & Automation",
+    "batchNumber": "BATCH-2026-AGR-1051",
+    "palletCode": "PALLET J-1051",
+    "stage": "CASH_REALISED",
+    "quantity": 20,
+    "unit": "Drone Systems",
+    "location": "Mahindra Agri Logistics Depot, Chandigarh",
+    "destination": "Mahindra Farm Mechanization Central, Mohali",
+    "carrier": "Completed / Delivered",
+    "lat": 30.7333,
+    "lng": 76.7794,
+    "verificationConfidence": 100,
+    "conditionStatus": "Full Settlement Received / Collateral Released",
+    "lastInspectionDate": "2026-08-28 09:00 IST",
+    "temperatureC": 25.0,
+    "humidityPct": 50.0,
+    "currentVal": 2800000.0,
+    "originalVal": 2800000.0,
+    "existingFin": 0.0,
+    "expectedDays": 0,
+    "buyer": "Mahindra & Mahindra Farm Equipment",
+    "buyerScore": 98,
+    "poNumber": "PO-2026-MM-7190",
+    "invoiceNumber": "INV-2026-AGR-5512-PAID",
+    "paymentTerms": "Net 30 - 100% PAID VIA RTGS",
+    "deliveryDeadline": "2026-08-15 (Fulfilled)",
+    "ownershipStatus": "Title Transferred to Buyer / All Liens Discharged",
+    "contractStatus": "Settled & Closed",
+    "incoterms": "DDP Mohali",
+    "physRisk": 0,
+    "buyerRisk": 0,
+    "logRisk": 0,
+    "marketRisk": 0,
+    "payRisk": 0,
+    "records": [
+      {
+        "id": "FIN-1051-A",
+        "provider": "HDFC Agri Finance",
+        "instrument": "Settled / Closed",
+        "amount": 2200000.0,
+        "outstanding": 0.0,
+        "status": "SETTLED",
+        "startDate": "2026-07-20",
+        "interestRate": 8.5
+      }
+    ],
+    "sources": [
+      {
+        "source": "RBI RTGS Clearing Gateway",
+        "field": "Remittance UTR",
+        "value": "UTR-HDFC-991823901-PAID (\u20b928,00,000)",
+        "confidence": 100,
+        "timestamp": "2026-08-28 09:00",
+        "verified": true
+      }
+    ],
+    "conflicts": [],
+    "valuations": [
+      {
+        "date": "2026-07-20",
+        "value": 2800000.0,
+        "event": "PO Verified"
+      },
+      {
+        "date": "2026-08-15",
+        "value": 2800000.0,
+        "event": "Delivered"
+      },
+      {
+        "date": "2026-08-28",
+        "value": 2800000.0,
+        "event": "Full Cash Realisation (\u20b928L)"
+      }
+    ],
+    "riskHistory": [
+      {
+        "date": "2026-07-20",
+        "riskScore": 22,
+        "event": "Baseline"
+      },
+      {
+        "date": "2026-08-28",
+        "riskScore": 0,
+        "event": "Fully Settled (Zero Risk)"
+      }
+    ],
+    "decisionTrail": [
+      {
+        "time": "09:00 IST",
+        "event": "Full Cash Settlement Realised",
+        "description": "RTGS payment of \u20b928,00,000 received. All financing lines repaid in full, liens discharged.",
+        "dataSources": [
+          "RBI RTGS Feed",
+          "HDFC Escrow"
+        ],
+        "confidence": 100,
+        "impact": "Lifecycle Complete - Cash Realised"
+      }
+    ],
+    "events": [
+      {
+        "id": "EVT-1051-1",
+        "timestamp": "2026-08-28 09:00",
+        "stage": "CASH_REALISED",
+        "eventType": "PAYMENT_RECEIVED",
+        "description": "Customer paid 100% invoice amount. Collateral released.",
+        "severity": "INFO",
+        "source": "Bank RTGS",
+        "impact": "Financing Settled"
+      }
+    ],
+    "waypoints": [
+      {
+        "name": "Chandigarh AgriTech Facility",
+        "lat": 30.7333,
+        "lng": 76.7794,
+        "status": "COMPLETED",
+        "timestamp": "Aug 10"
+      },
+      {
+        "name": "Mahindra Mohali Distribution Center",
+        "lat": 30.7046,
+        "lng": 76.7179,
+        "status": "COMPLETED",
+        "timestamp": "Aug 15 (Settled)"
+      }
+    ]
+  }
+]

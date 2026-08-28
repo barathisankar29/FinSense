@@ -1,0 +1,9 @@
+﻿client/node_modules/
+client/dist/
+server/__pycache__/
+__pycache__/
+.pytest_cache/
+.env
+client/.env
+server/.env
+*.pyc
